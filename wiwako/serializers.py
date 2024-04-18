@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from .models import Wiwako, Photo
+from .models import Wiwako, Photo,Submit
 from carousel.models import CarouselItem
 
 class PhotoSerializer(serializers.ModelSerializer):
@@ -34,5 +34,8 @@ class CarouselItemSerializer(serializers.ModelSerializer):
 
 
 
-
+class SubmitSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Submit
+        fields = '__all__'
 

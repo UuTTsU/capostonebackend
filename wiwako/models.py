@@ -15,3 +15,12 @@ class Wiwako(models.Model):
 
     def __str__(self):
         return self.Geo_name
+
+
+
+class Submit(models.Model):
+    email = models.EmailField()
+    number = models.CharField(max_length=100)
+    comment = models.TextField()
+
+
